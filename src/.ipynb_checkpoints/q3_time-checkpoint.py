@@ -5,7 +5,7 @@ import json
 from collections import Counter
 
 basePath = os.path.dirname(os.path.abspath(''))
-def q3_memory(file_path: str) -> List[Tuple[str, int]]:
+def q3_time(file_path: str) -> List[Tuple[str, int]]:
     df = pd.read_json(basePath + file_path, lines=True)
     df= df['mentionedUsers']
     df_filtered = df.dropna()
